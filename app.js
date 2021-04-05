@@ -10,7 +10,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/user');
 const groupRouter = require('./routes/group');
 const addressRouter = require('./routes/address');
-const phoneRouter = require('./routes/phone');
+//const phoneRouter = require('./routes/phone');
+const contactRouter = require('./routes/contact');
 
 var app = express();
 
@@ -30,7 +31,8 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/group', groupRouter);
 app.use('/address', addressRouter);
-app.use('/phone', phoneRouter);
+//app.use('/phone', phoneRouter);
+app.use('/contact', contactRouter);
 
 app.use(function (req, res, next) {
     next(createError(404));

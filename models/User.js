@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
-    email:{
+    email: {
         type: String,
         unique: true,
         required: true
@@ -9,11 +9,8 @@ const schema = mongoose.Schema({
     password: {
         type: String,
         required: true
-    },
-    createdAt:{
-        type: Date,
-        default: Date.now
     }
-});
+}, { timestamps: true }
+);
 
 module.exports = mongoose.model('User', schema, 'users');
